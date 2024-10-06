@@ -1,0 +1,20 @@
+
+The given text contains information about whether the price of a 40% Stock, 60% Bond Portfolio is expected to move by more than 2% within 5 days, where class 1 denotes a fall, class 2 denotes a rise, and class 0 implies no change (tie), along with the underlying brief reasoning that led the AI to make that decision.
+Based on this information, analyze the cause-and-effect relationships underlying the AI's decision and explain them in detail. It is possible that multiple cause-and-effect relationships exist within the sentences providing the reasoning. Extract all of these, and create a node list and an edge list. When connecting causes and effects, use "--*" for paradoxical connections like "despite" or "but," and use "-->" for logical connections like "therefore." Also, connect the final formed cause-and-effect relationships with the decision using either "-->" or "--*" depending on the connection. For the decision nodes, indicate only the numbers representing the decisions (1, 2, or 0).
+Be sure to output only the answer. Since the output will be processed mechanically, strictly follow the format shown in the example, and do not forget to include connection types ("-->" or "--*") as well as the nodes representing causes and effects.
+Additionally, ensure that no phrases that do not exist in the original text are included in the edge list and confirm that the occurrence of phrases not present in the original text is 0.
+Finally, output the result in JSON format.
+Example:
+Input
+0;Given the mixed market sentiment, slight volatility in interest rates, and decreasing market volatility, the portfolio is likely to experience minor fluctuations.;
+Output
+{
+  "nodes": ["mixed market sentiment", "slight volatility in interest rates", "decreasing market volatility", "portfolio is likely to experience minor fluctuations", "0"],
+  "edges": [
+    ["mixed market sentiment", "-->", "portfolio is likely to experience minor fluctuations"],
+    ["slight volatility in interest rates", "-->", "portfolio is likely to experience minor fluctuations"],
+    ["decreasing market volatility", "-->", "portfolio is likely to experience minor fluctuations"],
+    ["portfolio is likely to experience minor fluctuations", "-->", "0"]
+  ]
+}
+=====
