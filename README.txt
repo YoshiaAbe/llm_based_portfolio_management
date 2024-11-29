@@ -24,3 +24,4 @@ Day 165 (Trial 4)
 
 Note: 
  - In our experiments, GPT-4 was primarily used. When using GPT-3.5, Class 0 (tie) was more frequently output as a prediction. So, GPT-3.5 outperformed GPT-4 in terms of overall accuracy across the three classes, but it was inferior in the F1-score for Class 1 (fall). Additionally, from the perspective of portfolio management, there was a decrease in the cases where LLM outperformed the buy-and-hold or other baseline strategies in terms of Sharp ratio. 
+ - If no position adjustment is made in the evaluation, the LLM-based strategy became the best strategy in more cases.
